@@ -1,5 +1,7 @@
 # Figma Plugin TypeScript Boilerplate
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/aarongarciah/figma-plugin-typescript-boilerplate.svg)](https://greenkeeper.io/)
+
 Figma plugin TypeScript boilerplate to start developing right away.
 
 ## Quick start
