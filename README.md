@@ -24,7 +24,9 @@ Take a look if someone already opened [a similar issue](https://github.com/aaron
 
 ## Roadmap
 
+- [ ] Improve README and detail boilerplate goodies.
 - [ ] Create a new package based on this one with an interactive CLI to create templates with different options: UI/No UI, TS/JS, etc.
+- [ ] Find proper ways of testing plugins outside Figma and add testing setup.
 
 ---
 
