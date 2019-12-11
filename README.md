@@ -2,6 +2,20 @@
 
 Figma plugin TypeScript boilerplate to start developing right away.
 
+## Quick start
+
+In your terminal, execute these commands
+
+```bash
+mkdir my-plugin
+cd my-plugin
+npx degit https://github.com/aarongarciah/figma-plugin-typescript-boilerplate
+```
+
+or [download the repo](https://github.com/aarongarciah/figma-plugin-typescript-boilerplate/archive/master.zip) and extract it into your empty plugin folder.
+
+> You'll need Node and at least npm v5.2.0 to execute the `npx` command
+
 ## Development
 
 To develop a Figma plugin you need to install the Figma [desktop app](https://www.figma.com/downloads/). Learn more in the [Figma Plugin docs](https://www.figma.com/plugin-docs/setup/).
@@ -9,10 +23,10 @@ To develop a Figma plugin you need to install the Figma [desktop app](https://ww
 ### Available commands:
 
 - `npm run dev`: starts the watcher for changes. Modify the files under the `src` folder and the code will be compiled automatically. Then, go to the Figma app and run your development plugin.
-- `npm run build`: generates the production build in the `dist` folder. Before generating the build, it checks the TypeScript code for linting errors.
+- `npm run build`: generates the production build in the `dist` folder. Before generating the build, it checks the TypeScript, JavaScript and CSS files for linting errors.
 - `npm run test`: simple test that ensures that the `ui.html` and `plugin.js` files have been generated in the `dist` folder.
-- `npm run lint`: lint TypeScript code.
-- `npm run lint:fix`: lint and apply automatic fixes to TypeScript code. This script runs before `build`.
+- `npm run lint`: lint TypeScript and JavaScript files with ESLint and CSS with Stylelint.
+- `npm run lint:fix`: lint and apply automatic fixes to TypeScript, JavaScript and CSS files. This script runs before `build`.
 
 ---
 
