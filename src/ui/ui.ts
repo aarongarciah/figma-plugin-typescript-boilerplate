@@ -8,7 +8,7 @@ function postMessage({ type, payload }: UIAction): void {
 }
 
 // Listen to messages received from the plugin worker (src/plugin/plugin.ts)
-function listenToPluginMessages() {
+function listenToPluginMessages(): void {
   window.onmessage = function(event: MessageEvent): void {
     const pluginMessage = event.data.pluginMessage as WorkerAction;
     const { type, payload } = pluginMessage;
