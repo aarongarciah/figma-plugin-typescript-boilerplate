@@ -1,0 +1,70 @@
+/* Variables */
+:root {
+  --spacing: 8px;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-primary: #18a0fb;
+}
+
+/* Fonts */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://rsms.me/inter/font-files/Inter-Regular.woff2?v=3.7') format('woff2'),
+    url('https://rsms.me/inter/font-files/Inter-Regular.woff?v=3.7') format('woff');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  src: url('https://rsms.me/inter/font-files/Inter-Medium.woff2?v=3.7') format('woff2'),
+    url('https://rsms.me/inter/font-files/Inter-Medium.woff2?v=3.7') format('woff');
+}
+
+/* Global styles */
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Layout */
+.container {
+  font-size: 12px;
+}
+
+.container > * + * {
+  margin-top: var(--spacing);
+}
+
+h1 {
+  font-size: 14px;
+}
+
+/* Button */
+.button {
+  display: block;
+  width: 100%;
+  height: 30px;
+  padding: 5px 16px 5px 16px;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  outline: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  line-height: 1.5;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+}
+
+.button:active {
+  border: 2px solid rgba(0, 0, 0, 0.3);
+}

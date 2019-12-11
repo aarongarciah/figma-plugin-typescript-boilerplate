@@ -1,0 +1,70 @@
+{
+  "private": true,
+  "name": "figma-plugin-boilerplate",
+  "version": "0.1.0",
+  "description": "Figma Plugin boilerplate to start developing right away",
+  "scripts": {
+    "dev": "webpack --watch",
+    "prebuild": "npm run lint:ts:fix && npm run lint:css:fix && rimraf dist/*",
+    "build": "webpack -p",
+    "lint": "npm run lint:ts && npm run lint:css",
+    "lint:fix": "npm run lint:ts:fix && npm run lint:css:fix",
+    "lint:ts": "eslint . --ext .ts,.js",
+    "lint:ts:fix": "eslint . --ext .ts,.js",
+    "lint:css": "stylelint 'src/**/*'",
+    "lint:css:fix": "stylelint 'src/**/*' --fix",
+    "test": "test -f dist/ui.html && test -f dist/plugin.js && echo \"Production files built correctly in the /dist folder\" && exit 0 || echo \"Couldn't find the production files under the /dist folder\" exit 1"
+  },
+  "author": "Aarón García Hervás <aarongarciahervas@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/figma": "^1.0.1",
+    "@typescript-eslint/eslint-plugin": "^2.11.0",
+    "@typescript-eslint/parser": "^2.11.0",
+    "css-loader": "^3.3.0",
+    "eslint": "^6.7.2",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "html-webpack-inline-source-plugin": "0.0.10",
+    "html-webpack-plugin": "^3.2.0",
+    "husky": "^3.1.0",
+    "lint-staged": "^9.5.0",
+    "prettier": "^1.19.1",
+    "rimraf": "^3.0.0",
+    "style-loader": "^1.0.1",
+    "stylelint": "^12.0.0",
+    "stylelint-config-prettier": "^8.0.0",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-prettier": "^1.1.1",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.3",
+    "url-loader": "^3.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  },
+  "keywords": [
+    "figma",
+    "plugin",
+    "figma plugin",
+    "boilerplate",
+    "typescript",
+    "eslint",
+    "stylelint",
+    "prettier"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,js}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.src/**/*": [
+      "stylelint --fix",
+      "git add"
+    ]
+  }
+}
