@@ -26,4 +26,4 @@ jobs:
           name: dist
           path: ./dist
       - name: Test
-        run: npm run test
+        run: npm run test:ci

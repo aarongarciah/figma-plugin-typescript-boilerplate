@@ -4,8 +4,9 @@
   "version": "0.1.0",
   "description": "Figma Plugin boilerplate to start developing right away",
   "scripts": {
+    "start": "npm run dev",
     "dev": "webpack --watch",
-    "prebuild": "npm run lint:ts:fix && npm run lint:css:fix && rimraf dist/*",
+    "prebuild": "npm run lint:fix && rimraf dist/*",
     "build": "webpack -p",
     "lint": "npm run lint:ts && npm run lint:css",
     "lint:fix": "npm run lint:ts:fix && npm run lint:css:fix",
@@ -13,7 +14,10 @@
     "lint:ts:fix": "eslint . --ext .ts,.js",
     "lint:css": "stylelint 'src/**/*'",
     "lint:css:fix": "stylelint 'src/**/*' --fix",
-    "test": "test -f dist/ui.html && test -f dist/plugin.js && echo \"Production files built correctly in the /dist folder\" && exit 0 || echo \"Couldn't find the production files under the /dist folder\" exit 1"
+    "test:base": "test -f dist/ui.html && test -f dist/plugin.js && echo \"Production files built correctly in the /dist folder\" && exit 0 || echo \"Couldn't find the production files under the /dist folder\" exit 1",
+    "pretest": "npm run build",
+    "test": "npm run test:base",
+    "test:ci": "npm run test:base"
   },
   "author": "Aarón García Hervás <aarongarciahervas@gmail.com>",
   "license": "MIT",
