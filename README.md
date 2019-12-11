@@ -1,5 +1,6 @@
 # Figma Plugin TypeScript Boilerplate
 
+[![Actions Status](https://github.com/aarongarciah/figma-plugin-typescript-boilerplate/workflows/CI/badge.svg)](https://github.com/aarongarciah/figma-plugin-typescript-boilerplate/actions)
 [![Greenkeeper badge](https://badges.greenkeeper.io/aarongarciah/figma-plugin-typescript-boilerplate.svg)](https://greenkeeper.io/)
 
 Figma plugin TypeScript boilerplate to start developing right away.
