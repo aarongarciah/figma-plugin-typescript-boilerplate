@@ -40,7 +40,7 @@ To develop a Figma plugin you need to install the Figma [desktop app](https://ww
 
 - `npm run dev`: starts the watcher for changes. Modify the files under the `src` folder and the code will be compiled automatically. Then, go to the Figma app and run your development plugin.
 - `npm run build`: generates the production build in the `dist` folder. Important: run this command before releaseing a new version of your plugin. Before generating the build, it checks TypeScript, JavaScript and CSS files for linting errors.
-- `npm run test`: simple test that ensures that the `ui.html` and `plugin.js` files have been generated in the `dist` folder.
+- `npm run test`: runs tests via Jest.
 - `npm run lint`: lint TypeScript and JavaScript files with ESLint and CSS with Stylelint.
 - `npm run lint:fix`: lint and apply automatic fixes to TypeScript, JavaScript and CSS files. This script runs before `build`.
 
@@ -52,17 +52,12 @@ To develop a Figma plugin you need to install the Figma [desktop app](https://ww
 
 - Compiles TypeScript.
 - Inlines JS and CSS code into the HTML for the UI. That's because the Figma plugin UI must be a unique HTML file and can't reference any other assets like CSS or JS with relative paths. You can load any external asset (e.g. a file hosted in a CDN) but not relative paths.
-- Provides config for: TypeScript, webpack, ESLint, Stylelint, Prettier, EditorConfig, etc.
+- Provides setup and config for: TypeScript, webpack, ESLint, Stylelint, Prettier, Jest, EditorConfig, etc.
 - Lints and formats the code in a pre-commit hook.
 - Provides boilerplate to send messages between the worker and the UI.
 - Contains a helper to close the UI if you hit the <kbd>ESC</kbd>. The UI won't be closed if an input is focused.
+- Testing environment configured with Jest. Every test file under a `__tests__` folder or ending with `.spec.*` or `.test.*` will be picked up by Jest.
 - Contains a GitHub action to build and test the production build.
-
----
-
-## FAQ
-
-TODO
 
 ---
 
@@ -74,9 +69,7 @@ Take a look if someone already opened [a similar issue](https://github.com/aaron
 
 ## Roadmap
 
-- [ ] Add Jest testing setup.
 - [ ] Add FAQ to README.
-- [ ] Create a new package based on this one with an interactive CLI to create templates with different options: UI/No UI, TS/JS, etc.
 
 ---
 
