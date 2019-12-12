@@ -14,10 +14,11 @@
     "lint:ts:fix": "eslint . --ext .ts,.js",
     "lint:css": "stylelint 'src/**/*'",
     "lint:css:fix": "stylelint 'src/**/*' --fix",
-    "test:base": "test -f dist/ui.html && test -f dist/plugin.js && echo \"Production files built correctly in the /dist folder\" && exit 0 || echo \"Couldn't find the production files under the /dist folder\" exit 1",
-    "pretest": "npm run build",
-    "test": "npm run test:base",
-    "test:ci": "npm run test:base"
+    "test:precheck": "test -d dist || npm run build",
+    "pretest": "npm run test:precheck",
+    "test": "jest",
+    "pretest:watch": "npm run test:precheck",
+    "test:watch": "jest --watch"
   },
   "author": {
     "name": "Aarón García Hervás",
