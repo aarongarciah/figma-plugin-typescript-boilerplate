@@ -1,8 +1,19 @@
 {
   "private": true,
-  "name": "figma-plugin-boilerplate",
-  "version": "0.1.0",
-  "description": "Figma Plugin boilerplate to start developing right away",
+  "name": "figma-plugin-typescript-boilerplate",
+  "version": "1.0.0",
+  "description": "Figma plugin TypeScript boilerplate to start developing right away.",
+  "author": {
+    "name": "Aarón García Hervás",
+    "email": "aarongarciahervas@gmail.com",
+    "url": "https://twitter.com/aarongarciah"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aarongarciah/figma-plugin-typescript-boilerplate"
+  },
+  "homepage": "https://github.com/aarongarciah/figma-plugin-typescript-boilerplate#readme",
   "scripts": {
     "start": "npm run dev",
     "dev": "webpack --watch",
@@ -19,8 +30,6 @@
     "test": "npm run test:base",
     "test:ci": "npm run test:base"
   },
-  "author": "Aarón García Hervás <aarongarciahervas@gmail.com>",
-  "license": "MIT",
   "devDependencies": {
     "@types/figma": "^1.0.1",
     "@typescript-eslint/eslint-plugin": "^2.11.0",
