@@ -79,7 +79,7 @@
       "stylelint --fix",
       "git add"
     ],
-    "*.md": [
+    "*.{html,json,md}": [
       "prettier --write",
       "git add"
     ]
