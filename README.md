@@ -10,8 +10,8 @@ Figma plugin TypeScript boilerplate to start developing right away.
 
 1. Get the boilerplate **choosing one** of these methods:
 
-   - Fork or clone this repo
-   - Execute these commands in your terminal
+   - Fork this repo.
+   - Execute these commands in your terminal:
      ```bash
      mkdir my-plugin
      cd my-plugin
