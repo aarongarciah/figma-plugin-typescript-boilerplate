@@ -3,17 +3,6 @@
   "name": "figma-plugin-typescript-boilerplate",
   "version": "1.0.0",
   "description": "Figma plugin TypeScript boilerplate to start developing right away.",
-  "author": {
-    "name": "Aarón García Hervás",
-    "email": "aarongarciahervas@gmail.com",
-    "url": "https://twitter.com/aarongarciah"
-  },
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/aarongarciah/figma-plugin-typescript-boilerplate"
-  },
-  "homepage": "https://github.com/aarongarciah/figma-plugin-typescript-boilerplate#readme",
   "scripts": {
     "start": "npm run dev",
     "dev": "webpack --watch",
@@ -25,22 +14,37 @@
     "lint:ts:fix": "eslint . --ext .ts,.js",
     "lint:css": "stylelint 'src/**/*'",
     "lint:css:fix": "stylelint 'src/**/*' --fix",
-    "test:base": "test -f dist/ui.html && test -f dist/plugin.js && echo \"Production files built correctly in the /dist folder\" && exit 0 || echo \"Couldn't find the production files under the /dist folder\" exit 1",
-    "pretest": "npm run build",
-    "test": "npm run test:base",
-    "test:ci": "npm run test:base"
+    "test:precheck": "test -d dist || npm run build",
+    "pretest": "npm run test:precheck",
+    "test": "jest",
+    "pretest:watch": "npm run test:precheck",
+    "test:watch": "jest --watch"
   },
+  "author": {
+    "name": "Aarón García Hervás",
+    "email": "aarongarciahervas@gmail.com",
+    "url": "https://twitter.com/aarongarciah"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aarongarciah/figma-plugin-typescript-boilerplate"
+  },
+  "homepage": "https://github.com/aarongarciah/figma-plugin-typescript-boilerplate#readme",
   "devDependencies": {
     "@types/figma": "^1.0.1",
+    "@types/jest": "^24.0.23",
+    "@types/node": "^12.12.17",
     "@typescript-eslint/eslint-plugin": "^2.11.0",
     "@typescript-eslint/parser": "^2.11.0",
-    "css-loader": "^3.3.0",
+    "css-loader": "^3.3.2",
     "eslint": "^6.7.2",
     "eslint-config-prettier": "^6.7.0",
     "eslint-plugin-prettier": "^3.1.1",
     "html-webpack-inline-source-plugin": "0.0.10",
     "html-webpack-plugin": "^3.2.0",
     "husky": "^3.1.0",
+    "jest": "^24.9.0",
     "lint-staged": "^9.5.0",
     "prettier": "^1.19.1",
     "rimraf": "^3.0.0",
@@ -49,6 +53,7 @@
     "stylelint-config-prettier": "^8.0.0",
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-prettier": "^1.1.1",
+    "ts-jest": "^24.2.0",
     "ts-loader": "^6.2.1",
     "typescript": "^3.7.3",
     "url-loader": "^3.0.0",
