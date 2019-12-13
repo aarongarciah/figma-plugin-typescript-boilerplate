@@ -40,7 +40,8 @@ To develop a Figma plugin you need to install the Figma [desktop app](https://ww
 
 - `npm run dev`: starts the watcher for changes. Modify the files under the `src` folder and the code will be compiled automatically. Then, go to the Figma app and run your development plugin.
 - `npm run build`: generates the production build in the `dist` folder. Important: run this command before releaseing a new version of your plugin. Before generating the build, it checks TypeScript, JavaScript and CSS files for linting errors.
-- `npm run test`: runs tests via Jest.
+- `npm run test`: runs tests via Jest. This script runs before `build`.
+- `npm run test:watch`: runs tests via Jest in watch mode.
 - `npm run lint`: lint TypeScript and JavaScript files with ESLint and CSS with Stylelint.
 - `npm run lint:fix`: lint and apply automatic fixes to TypeScript, JavaScript and CSS files. This script runs before `build`.
 

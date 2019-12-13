@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm run dev",
     "dev": "webpack --watch",
-    "prebuild": "npm run lint:fix && rimraf dist/*",
+    "prebuild": "npm run lint:fix && npm run test && rimraf dist/*",
     "build": "webpack -p",
     "lint": "npm run lint:ts && npm run lint:css",
     "lint:fix": "npm run lint:ts:fix && npm run lint:css:fix",
