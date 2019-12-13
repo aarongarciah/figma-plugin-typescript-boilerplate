@@ -71,6 +71,7 @@ Take a look if someone already opened [a similar issue](https://github.com/aaron
 ## Roadmap
 
 - [ ] Add FAQ to README.
+- [ ] Add bin executables to create templates via `npx`.
 
 ---
 
