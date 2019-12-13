@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm run dev",
     "dev": "webpack --watch",
-    "prebuild": "npm run lint:fix && npm run test && rimraf dist/*",
+    "prebuild": "npm run lint:fix && rimraf dist/*",
     "build": "webpack -p",
     "lint": "npm run lint:ts && npm run lint:css",
     "lint:fix": "npm run lint:ts:fix && npm run lint:css:fix",
@@ -14,11 +14,12 @@
     "lint:ts:fix": "eslint . --ext .ts,.js",
     "lint:css": "stylelint 'src/**/*'",
     "lint:css:fix": "stylelint 'src/**/*' --fix",
+    "test:base": "jest --passWithNoTests",
     "test:precheck": "test -d dist || npm run build",
     "pretest": "npm run test:precheck",
-    "test": "jest --passWithNoTests",
+    "test": "npm run test:base",
     "pretest:watch": "npm run test:precheck",
-    "test:watch": "jest --watch --passWithNoTests"
+    "test:watch": "npm run test:base -- --watch"
   },
   "author": {
     "name": "Aarón García Hervás",
