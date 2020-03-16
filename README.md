@@ -3,7 +3,7 @@
 **Figma plugin TypeScript boilerplate to start developing right away.**
 
 [![Actions Status](https://github.com/aarongarciah/figma-plugin-typescript-boilerplate/workflows/CI/badge.svg)](https://github.com/aarongarciah/figma-plugin-typescript-boilerplate/actions)
-[![Greenkeeper badge](https://badges.greenkeeper.io/aarongarciah/figma-plugin-typescript-boilerplate.svg)](https://greenkeeper.io/)
+
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 ## Quick start
