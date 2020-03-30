@@ -36,14 +36,21 @@
 
 To develop a Figma plugin you need to install the Figma [desktop app](https://www.figma.com/downloads/). Learn more in the [Figma Plugin docs](https://www.figma.com/plugin-docs/setup/).
 
-### Available commands:
+### Available commands
 
-- `npm run dev`: starts the watcher for changes. Modify the files under the `src` folder and the code will be compiled automatically. Then, go to the Figma app and run your development plugin.
-- `npm run build`: generates the production build in the `dist` folder. Important: run this command before releaseing a new version of your plugin. Before generating the build, it checks TypeScript, JavaScript and CSS files for linting errors.
-- `npm run test`: runs tests via Jest. This script runs before `build`.
-- `npm run test:watch`: runs tests via Jest in watch mode.
-- `npm run lint`: lint TypeScript and JavaScript files with ESLint and CSS with Stylelint.
-- `npm run lint:fix`: lint and apply automatic fixes to TypeScript, JavaScript and CSS files. This script runs before `build`.
+#### Development
+- `npm run dev`  starts the watcher for changes. Modify the files under the `src` folder and the code will be compiled automatically. Then, go to the Figma app and run your development plugin.
+
+#### Production build
+- `npm run build`  generates the production build in the `dist` folder. Important: run this command before releaseing a new version of your plugin. Before generating the build, it checks TypeScript, JavaScript and CSS files for linting errors.
+
+#### Test
+- `npm run test`  runs tests via Jest. This script runs before `build`.
+- `npm run test:watch`  runs tests via Jest in watch mode.
+
+#### Lint
+- `npm run lint`  lint TypeScript and JavaScript files with ESLint and CSS with Stylelint.
+- `npm run lint:fix`  lint and apply automatic fixes to TypeScript, JavaScript and CSS files. This script runs before `build`.
 
 ## What this boilerplate does for me?
 
@@ -56,9 +63,9 @@ To develop a Figma plugin you need to install the Figma [desktop app](https://ww
 - Provides setup and config for: TypeScript, webpack, ESLint, Stylelint, Prettier, Jest, EditorConfig, etc.
 - Lints and formats the code in a pre-commit hook.
 - Provides boilerplate to send messages between the worker and the UI.
-- Contains a helper to close the UI if you hit the <kbd>ESC</kbd>. The UI won't be closed if an input is focused.
+- Contains a helper to close the UI if you hit the <kbd>ESC</kbd> key outside of an input.
 - Testing environment configured with Jest. Every test file under a `__tests__` folder or ending with `.spec.*` or `.test.*` will be picked up by Jest.
-- Contains a GitHub action to build and test the production build.
+- Contains a GitHub action to run the `build` and `test` commands.
 
 ---
 
@@ -75,4 +82,8 @@ Take a look if someone already opened [a similar issue](https://github.com/aaron
 
 ---
 
-Made with ♥️ by [Aarón García Hervás](https://twitter.com/aarongarciah)
+## License
+
+MIT
+
+Made with ♥️ by [Aarón García Hervás](https://aarongarciah.com)
