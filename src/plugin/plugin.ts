@@ -22,7 +22,7 @@ function createRectangle(): void {
 }
 
 // Listen to messages received from the plugin UI (src/ui/ui.ts)
-figma.ui.onmessage = function({ type, payload }: UIAction): void {
+figma.ui.onmessage = function ({ type, payload }: UIAction): void {
   switch (type) {
     case UIActionTypes.CLOSE:
       figma.closePlugin();

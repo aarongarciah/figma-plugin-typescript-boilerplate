@@ -9,7 +9,7 @@ function postMessage({ type, payload }: UIAction): void {
 
 // Listen to messages received from the plugin worker (src/plugin/plugin.ts)
 function listenToPluginMessages(): void {
-  window.onmessage = function(event: MessageEvent): void {
+  window.onmessage = function (event: MessageEvent): void {
     const pluginMessage = event.data.pluginMessage as WorkerAction;
     const { type, payload } = pluginMessage;
 
@@ -25,7 +25,7 @@ function listenToPluginMessages(): void {
 function closeWithEscapeKey(): void {
   const tagExceptions = ['input', 'textarea'];
 
-  document.addEventListener('keydown', function(event: KeyboardEvent) {
+  document.addEventListener('keydown', function (event: KeyboardEvent) {
     try {
       const target = event.target as HTMLElement;
 
@@ -43,7 +43,7 @@ function closeWithEscapeKey(): void {
 
 // Attach event listeners (for this specific demo)
 function buttonListeners(): void {
-  document.addEventListener('click', function(event: MouseEvent) {
+  document.addEventListener('click', function (event: MouseEvent) {
     const target = event.target as HTMLElement;
 
     switch (target.id) {
