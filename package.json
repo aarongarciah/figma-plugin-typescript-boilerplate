@@ -11,7 +11,7 @@
     "lint": "npm run lint:ts && npm run lint:css",
     "lint:fix": "npm run lint:ts:fix && npm run lint:css:fix",
     "lint:ts": "eslint . --ext .ts,.js",
-    "lint:ts:fix": "eslint . --ext .ts,.js",
+    "lint:ts:fix": "eslint . --ext .ts,.js --fix",
     "lint:css": "stylelint 'src/**/*'",
     "lint:css:fix": "stylelint 'src/**/*' --fix",
     "test:base": "jest --passWithNoTests",
