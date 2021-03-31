@@ -1,4 +1,3 @@
-// UI actions
 export enum UIActionTypes {
   CLOSE = 'CLOSE',
   NOTIFY = 'NOTIFY',
@@ -11,7 +10,6 @@ export interface UIAction {
   payload?: any;
 }
 
-// Worker actions
 export enum WorkerActionTypes {
   CREATE_RECTANGLE_NOTIFY = 'CREATE_RECTANGLE_NOTIFY',
 }

@@ -1,4 +1,4 @@
-import { UIActionTypes, UIAction, WorkerActionTypes, WorkerAction } from '../types';
+import { UIActionTypes, UIAction, WorkerActionTypes, WorkerAction } from './types';
 
 // Sends a message to the plugin UI
 function postMessage({ type, payload }: WorkerAction): void {

@@ -1,4 +1,4 @@
-import { UIActionTypes, UIAction, WorkerActionTypes, WorkerAction } from '../types';
+import { UIActionTypes, UIAction, WorkerActionTypes, WorkerAction } from './types';
 
 import './ui.css';
 
