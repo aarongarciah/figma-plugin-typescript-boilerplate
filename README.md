@@ -3,7 +3,6 @@
 **Figma plugin TypeScript boilerplate to start developing right away.**
 
 [![Actions Status](https://github.com/aarongarciah/figma-plugin-typescript-boilerplate/workflows/CI/badge.svg)](https://github.com/aarongarciah/figma-plugin-typescript-boilerplate/actions)
-[![Known Vulnerabilities](https://snyk.io/test/github/aarongarciah/figma-plugin-typescript-boilerplate/badge.svg?targetFile=package.json)](https://snyk.io/test/github/aarongarciah/figma-plugin-typescript-boilerplate?targetFile=package.json)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 ## Quick start
