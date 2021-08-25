@@ -29,7 +29,7 @@
    npm run dev
    ```
 
-> You'll need Node and npm installed to use this boilerplate. It has been tested in Node 10, 11, 12 and 13.
+> You'll need Node and npm installed to use this boilerplate. It has been tested in Node 12, 14, and 16.
 
 ## Development
 
